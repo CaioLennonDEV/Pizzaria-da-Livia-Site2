@@ -1,77 +1,98 @@
-# Pizzaria da Livia - Sistema de Gerenciamento
+# Livia Pizzaria - Sistema de Gerenciamento
 
-Este é um sistema de gerenciamento para a Pizzaria da Livia, desenvolvido com Node.js e SQLite.
+Sistema de gerenciamento completo para pizzaria, desenvolvido com Node.js, Express e SQLite. O sistema oferece funcionalidades para gerenciamento de pedidos, clientes, produtos e categorias.
 
-## Estrutura do Banco de Dados
+## 🚀 Funcionalidades
 
-O sistema utiliza um banco de dados SQLite com as seguintes tabelas:
+- Autenticação de clientes (cadastro e login)
+- Gerenciamento de categorias de produtos
+- Catálogo de produtos
+- Sistema de pedidos
+- Perfil de cliente
+- API RESTful completa
 
-- **categorias**: Armazena as categorias de produtos (ex: Pizzas Salgadas, Pizzas Doces, etc.)
-- **produtos**: Cadastro de todos os produtos disponíveis
-- **clientes**: Informações dos clientes
-- **pedidos**: Registro dos pedidos realizados
-- **itens_pedido**: Itens incluídos em cada pedido
+## 📋 Pré-requisitos
 
-## Requisitos
-
-- Node.js (versão 12 ou superior)
+- Node.js (versão recomendada: 14.x ou superior)
 - NPM (Node Package Manager)
 
-## Instalação
+## 🔧 Instalação
 
-1. Clone este repositório
+1. Clone o repositório:
+```bash
+git clone [URL_DO_REPOSITÓRIO]
+cd livia-pizzaria
+```
+
 2. Instale as dependências:
 ```bash
 npm install
 ```
 
-## Configuração do Banco de Dados
-
-1. Para criar as tabelas do banco de dados:
+3. Configure o banco de dados:
 ```bash
 npm run setup
 ```
 
-2. Para inserir dados de exemplo:
+4. (Opcional) Insira dados de exemplo:
 ```bash
 npm run sample-data
 ```
 
-3. Para executar as consultas de exemplo:
+5. Inicie o servidor:
 ```bash
-npm run query
+npm start
 ```
 
-## Exemplos de Consultas Implementadas
+O servidor estará rodando em `http://localhost:3000`
 
-O arquivo `queries.js` contém exemplos de consultas comuns:
+## 🛠️ Tecnologias Utilizadas
 
-1. Listar todas as pizzas salgadas
-2. Buscar pedidos de um cliente específico
-3. Listar itens de um pedido específico
-4. Total de vendas por categoria
-5. Produtos mais vendidos
+- **Express.js** - Framework web
+- **SQLite3** - Banco de dados
+- **bcrypt** - Criptografia de senhas
+- **jsonwebtoken** - Autenticação JWT
 
-## Estrutura de Arquivos
+## 📚 Estrutura do Banco de Dados
 
-- `schema.js`: Criação das tabelas do banco de dados
-- `insert_sample_data.js`: Inserção de dados de exemplo
-- `queries.js`: Exemplos de consultas
-- `pizzaria.db`: Arquivo do banco de dados SQLite (criado automaticamente)
+O sistema utiliza as seguintes tabelas:
 
-## Observações
+- **categorias** - Categorias de produtos (ex: Pizzas, Bebidas, Sobremesas)
+- **produtos** - Cadastro de produtos
+- **clientes** - Dados dos clientes
+- **pedidos** - Registro de pedidos
+- **itens_pedido** - Itens individuais de cada pedido
 
-- O banco de dados é criado automaticamente ao executar o script de configuração
-- Os dados de exemplo incluem produtos, clientes e pedidos fictícios
-- Todas as consultas são feitas de forma assíncrona
-- Os preços estão em Reais (R$)
+## 🔐 Endpoints da API
 
-## Contribuição
+### Autenticação
+- `POST /api/clientes/cadastro` - Cadastro de novo cliente
+- `POST /api/clientes/login` - Login de cliente
 
-Para contribuir com o projeto:
+### Clientes
+- `GET /api/clientes/perfil` - Obter perfil do cliente (requer autenticação)
 
-1. Faça um fork do repositório
-2. Crie uma branch para sua feature
-3. Faça commit das suas alterações
-4. Faça push para a branch
-5. Abra um Pull Request 
+### Produtos e Categorias
+- `GET /api/categorias` - Listar todas as categorias
+- `GET /api/produtos` - Listar todos os produtos
+- `GET /api/produtos/:categoriaId` - Listar produtos por categoria
+
+### Pedidos
+- `POST /api/pedidos` - Criar novo pedido
+
+## 📦 Scripts Disponíveis
+
+- `npm start` - Inicia o servidor
+- `npm run setup` - Configura o banco de dados
+- `npm run sample-data` - Insere dados de exemplo
+- `npm run query` - Executa consultas de teste
+
+## 🔒 Segurança
+
+- Senhas criptografadas com bcrypt
+- Autenticação via JWT (JSON Web Tokens)
+- Validação de dados em todas as rotas
+
+## 📄 Licença
+
+Este projeto está sob a licença ISC. 
