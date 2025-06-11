@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria da Livia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Pizzaria da Livia</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Cardápio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                </ul>
+                <!-- Área de usuário -->
+                <div class="navbar-nav" id="userArea">
+                    <!-- Será preenchido via JavaScript -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container text-center">
+            <h1>Bem-vindo à Pizzaria da Livia</h1>
+            <p>As melhores pizzas da cidade, feitas com amor e ingredientes selecionados</p>
+            <a href="#menu" class="btn btn-primary btn-lg">Ver Cardápio</a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Nosso Cardápio</h2>
+            <div class="row" id="menu-container">
+                <!-- O conteúdo do menu será carregado dinamicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="about-section">
+        <div class="container">
+            <h2 class="text-center mb-4">Sobre Nós</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>A Pizzaria da Livia nasceu do amor pela gastronomia italiana e do desejo de oferecer as melhores pizzas da cidade. Nossa história começou em 2023, e desde então nos dedicamos a criar experiências únicas para nossos clientes.</p>
+                </div>
+                <div class="col-md-6">
+                    <p>Utilizamos apenas ingredientes frescos e de alta qualidade, seguindo receitas tradicionais italianas com um toque especial da Livia. Nossa massa é preparada diariamente e fermentada naturalmente por 48 horas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="contact-section">
+        <div class="container">
+            <h2 class="text-center mb-4">Entre em Contato</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <form id="contact-form">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="nome" placeholder="Nome" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control" id="telefone" placeholder="Telefone" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" id="mensagem" rows="3" placeholder="Mensagem" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <h4>Informações de Contato</h4>
+                        <p><strong>Endereço:</strong> Rua da Pizza, 123 - Centro</p>
+                        <p><strong>Telefone:</strong> (11) 99999-9999</p>
+                        <p><strong>Email:</strong> contato@pizzarialivia.com</p>
+                        <p><strong>Horário:</strong> Terça a Domingo, 18h às 23h</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 Pizzaria da Livia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal de Pedido -->
+    <div class="modal fade" id="pedidoModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Fazer Pedido</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="pedido-form">
+                        <div class="mb-3">
+                            <label for="quantidade" class="form-label">Quantidade</label>
+                            <input type="number" class="form-control" id="quantidade" min="1" value="1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="observacoes" class="form-label">Observações</label>
+                            <textarea class="form-control" id="observacoes" rows="2"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="confirmar-pedido">Confirmar Pedido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

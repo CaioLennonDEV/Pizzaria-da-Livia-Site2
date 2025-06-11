@@ -1,0 +1,130 @@
+/* Estilos gerais */
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+/* Navbar */
+.navbar {
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Cards */
+.card {
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+}
+
+.card-title {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Tabela */
+.table {
+    margin-bottom: 0;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+/* Status badges */
+.status-badge {
+    padding: 0.5em 1em;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 500;
+}
+
+.status-pendente {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.status-preparando {
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+.status-entregue {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.status-cancelado {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* Botões */
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.btn-acao {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+/* Filtros */
+.form-select, .form-control {
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+}
+
+/* Modal */
+.modal-content {
+    border-radius: 8px;
+    border: none;
+}
+
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.modal-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+}
+
+/* Detalhes do pedido */
+.detalhes-pedido {
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.detalhes-pedido h6 {
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .col-md-3 {
+        margin-bottom: 1rem;
+    }
+} 

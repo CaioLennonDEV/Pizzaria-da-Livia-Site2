@@ -1,0 +1,134 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+section {
+    padding: 80px 0;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('../images/pizza-hero.jpg') center/cover;
+    color: white;
+    padding: 150px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Menu Section */
+.menu-section {
+    background-color: #f8f9fa;
+}
+
+.menu-item {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.menu-item h4 {
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+.price {
+    color: #dc3545;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* About Section */
+.about-section {
+    background-color: white;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    color: #6c757d;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #f8f9fa;
+}
+
+.contact-info {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contact-info h4 {
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+}
+
+/* Navbar */
+.navbar {
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Botões */
+.btn-primary {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    padding: 10px 25px;
+}
+
+.btn-primary:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+}
+
+/* Animações */
+.menu-item, .contact-info {
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover, .contact-info:hover {
+    transform: translateY(-5px);
+} 
